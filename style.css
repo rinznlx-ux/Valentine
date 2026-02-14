@@ -1,0 +1,143 @@
+/* ===== Background ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background:
+        linear-gradient(rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.3)),
+        url("background.jpeg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    z-index: -1;
+}
+
+/* ===== Center Rectangle ===== */
+.center-box {
+    position: relative;
+    width: 85%;
+    max-width: 1100px;
+    min-height: 600px;
+    
+    background-color: #f8bbd0;
+    border-radius: 50px;
+    padding: 60px;
+    margin: 120px auto;
+    
+    color: white;
+    text-align: center;
+    
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.6),
+        0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Center Box Text Styling ===== */
+.center-box h1 {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 60px;
+    color: #ff3366;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.center-box p {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 26px;  /* increased size */
+    color: #ff6699;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ===== Prompt Box ===== */
+.prompt-box {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 80%;          /* slightly smaller width */
+    height: 320px;       /* slightly smaller height */
+    
+    background-color: white;
+    border-radius: 25px;
+    
+    padding: 30px;
+    text-align: center;
+    color: black;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Question and subtexts */
+.prompt-box p {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 26px;  /* slightly bigger */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===== Horizontal Button Group ===== */
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+/* Buttons */
+.prompt-box button {
+    width: 180px;           /* ensure text occupies full button */
+    min-height: 60px;       /* slightly taller */
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.4s ease;  
+    white-space: normal;
+    text-align: center;
+    overflow: visible;
+}
+
+/* YES Button */
+#yesBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* NO Button */
+#noBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Hover Effect */
+.prompt-box button:hover {
+    opacity: 0.85;
+}
